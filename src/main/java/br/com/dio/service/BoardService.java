@@ -13,6 +13,10 @@ public class BoardService {
 
     private final Connection connection;
 
+    public BoardService(Connection connection) {
+        
+    }
+
     public BoardEntity insert(final BoardEntity entity) throws SQLException {
         var dao = new BoardDAO(connection);
         var boardColumnDAO = new BoardColumnDAO(connection);

@@ -19,6 +19,11 @@ public class MigrationStrategy {
 
     private final Connection connection;
 
+    public MigrationStrategy(Connection connection, Connection connection1) {
+
+        this.connection = connection1;
+    }
+
     public void executeMigration(){
         var originalOut = System.out;
         var originalErr = System.err;
